@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">OdinInstall</string>
+    <string name="app_name_temp">Odin Install</string>
+    <string name="app_explain">移动端渠道推广解决方案</string>
+
+    <string name="str_one_key_wakeup">一键唤醒</string>
+    <string name="str_scenario_reduction">场景还原</string>
+    <string name="str_channel">渠道效果</string>
+    <string name="str_user">用户溯源</string>
+    <string name="str_user_relation">关系列表</string>
+    <string name="str_restore_scene">新闻快讯</string>
+    <string name="str_restore_scene_count">%d人浏览</string>
+    <string name="str_one_key_wakeup_use">立即使用</string>
+
+    <string name="str_channel_test">测试落地页</string>
+    <string name="str_visit_count">访问量</string>
+    <string name="str_click_count">点击量</string>
+    <string name="str_install_count">安装量</string>
+    <string name="str_wakeup_count">唤醒量</string>
+    <string name="str_channel_qr_code">渠道二维码</string>
+    <string name="str_channel_explain">扫码打开页面并下载应用\n即会统计相应的渠道效果</string>
+</resources>

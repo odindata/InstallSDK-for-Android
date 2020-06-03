@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.odin.install.demo">
+
+    <!--Install需要的权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取mac地址 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取deviceId -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写文件存储 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".OdinApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <meta-data
+            android:name="Odin-AppKey"
+            android:value="985459861c2c4e7b8f4f2c7245e56448" />
+        <meta-data
+            android:name="Odin-Secret"
+            android:value="b250f2ba017048e88275154a62ed1bce" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".SplashActivity"
+            android:launchMode="singleTask" />
+
+        <!--设置唤醒Activity的scheme、host和path-->
+        <activity
+            android:name=".ui.OneKeyWakeupActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!--scheme是奥丁开发者中心分配的-->
+                <data android:scheme="sdkdemo" />
+            </intent-filter>
+        </activity>
+
+        <!--设置场景还原Activity的scheme、host和path-->
+        <activity
+            android:name=".ui.RestoreSceneActivity"
+            android:launchMode="singleTask">
+
+        </activity>
+
+        <activity android:name=".ui.ScenarioReductionActivity" />
+        <activity android:name=".ui.ChannelActivity" />
+        <activity android:name=".ui.UserTraceActivity" />
+        <activity android:name=".ui.UserRelationActivity" />
+
+
+        <!-- Odin分享核心的Activity，不可缺少 -->
+        <activity
+            android:name="cn.odinshare.core.OdinUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+    </application>
+
+</manifest>

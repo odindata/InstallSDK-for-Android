@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_header"
+    android:paddingTop="11dp"
+    android:paddingBottom="11dp">
+
+    <ImageView
+        android:id="@+id/img_header_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@mipmap/shape1" />
+
+    <TextView
+        android:id="@+id/tv_header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:text="@string/str_scenario_reduction"
+        android:textColor="@color/colorAppName"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/img_header_restore_share"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@mipmap/share" />
+</RelativeLayout>

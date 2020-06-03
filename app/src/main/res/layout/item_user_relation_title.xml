@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/tv_user_relation_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/shape_header"
+        android:paddingStart="14dp"
+        android:paddingLeft="14dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="9dp"
+        android:text="我的账号"
+        android:textColor="@color/colorUserRelationTitle" />
+
+</LinearLayout>

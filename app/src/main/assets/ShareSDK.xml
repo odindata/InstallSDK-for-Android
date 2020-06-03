@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DevInfor>
+
+    <!--  奥丁分享：相关字段解析   -->
+
+    <!--  1、Id:奥丁数据-用户中心-开发者中心统计数据时需要，不可修改  -->
+    <!--  2、SortId:一键分享界面，各个平台排版排序使用，可以按需修改  -->
+    <!--  3、AppKey、AppId、AppSecret、
+             ConsumerKey、ConsumerSecret、
+             ClientId、ClientSecret、
+             RedirectUrl、RedirectUri和CallbackUrl: 需要去各个平台的开发者中心申请 -->
+
+    <OdinShareSDK
+        AppKey="985459861c2c4e7b8f4f2c7245e56448"
+        AppSecret="b250f2ba017048e88275154a62ed1bce" />
+
+    <QQ
+        Id="998"
+        SortId="1"
+        AppId="101879896"
+        AppKey="d7a6de61c89858f1bef3c3002f4a6d77"
+        Enable="true" />
+
+    <QZone
+        Id="998"
+        SortId="2"
+        AppId="101879896"
+        AppKey="d7a6de61c89858f1bef3c3002f4a6d77"
+        Enable="true" />
+
+    <Wechat
+        Id="997"
+        SortId="3"
+        AppId="wx7e0acb745b6bcf44"
+        AppSecret="0583956fe095990091f70fab824567ab"
+        UserName="gh_afb25ac019c9"
+        Path="pages/index/index.html?id=1"
+        WithShareTicket = "true"
+        MiniprogramType = "0"
+        Enable="true" />
+
+    <WechatMoments
+        Id="997"
+        SortId="4"
+        AppId="wx7e0acb745b6bcf44"
+        AppSecret="0583956fe095990091f70fab824567ab"
+        Enable="true" />
+
+    <WechatFavorite
+        Id="997"
+        SortId="5"
+        AppId="wx7e0acb745b6bcf44"
+        AppSecret="0583956fe095990091f70fab824567ab"
+        Enable="true" />
+
+</DevInfor>

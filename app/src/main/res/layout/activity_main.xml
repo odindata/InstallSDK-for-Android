@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:gravity="center_horizontal"
+        android:padding="22dp"
+        android:text="@string/app_name_temp"
+        android:textColor="@color/colorAppName"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="19dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_over_copy" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="22dp"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:onClick="oneKeyWakeup"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="true">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="30dp"
+                android:drawableTop="@mipmap/icon_one_key_wakeup"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:text="@string/str_one_key_wakeup"
+                android:textColor="@color/colorMenuText"
+                android:textSize="12sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginLeft="18dp"
+            android:layout_weight="1"
+            android:background="@color/colorMenu"
+            android:onClick="scenarioReduction"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="true">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="30dp"
+                android:drawableTop="@mipmap/icon_scenario_reduction"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:text="@string/str_scenario_reduction"
+                android:textColor="@color/colorMenuText"
+                android:textSize="12sp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="22dp"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:onClick="channel"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="true">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="30dp"
+                android:drawableTop="@mipmap/icon_channel"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:text="@string/str_channel"
+                android:textColor="@color/colorMenuText"
+                android:textSize="12sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginLeft="18dp"
+            android:layout_weight="1"
+            android:background="@color/colorMenu"
+            android:onClick="userTrace"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="true">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="30dp"
+                android:drawableTop="@mipmap/icon_user"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:text="@string/str_user"
+                android:textColor="@color/colorMenuText"
+                android:textSize="12sp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>
