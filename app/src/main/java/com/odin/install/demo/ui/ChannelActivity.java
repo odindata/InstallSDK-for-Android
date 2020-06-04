@@ -7,7 +7,7 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.odin.install.demo.BaseSchemeActivity;
+import com.odin.install.demo.BaseInstallActivity;
 import com.odin.install.demo.Constant;
 import com.odin.install.demo.R;
 import com.odin.install.demo.data.ChannelData;
@@ -33,7 +33,7 @@ import io.reactivex.schedulers.Schedulers;
 /**
  * 渠道效果，查询渠道的统计数据
  */
-public class ChannelActivity extends BaseSchemeActivity {
+public class ChannelActivity extends BaseInstallActivity {
 
     private TextView mTvVisits;
     private TextView mTvOnclick;

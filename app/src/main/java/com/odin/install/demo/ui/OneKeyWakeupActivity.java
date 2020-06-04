@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.odin.install.demo.BaseSchemeActivity;
+import com.odin.install.demo.MainActivity;
 import com.odin.install.demo.utils.GlobalUtil;
 import com.odin.install.demo.R;
 import com.odin.odininstall.OdinInstall;
@@ -27,6 +28,9 @@ public class OneKeyWakeupActivity extends BaseSchemeActivity {
             //获取绑定数据
             String bindData = appData.getData();
             Log.d(TAG, "channelCode: " + channelCode + ", wakeupData = " + appData.toString());
+            if (bindData == null) {
+                RestoreSceneActivity.newInstance(OneKeyWakeupActivity.this, "", "", "");
+            }
         }
     };
 
@@ -38,6 +42,12 @@ public class OneKeyWakeupActivity extends BaseSchemeActivity {
     @Override
     public String getTitleText() {
         return getString(R.string.str_one_key_wakeup);
+    }
+
+    @Override
+    public void onClickHeaderBack() {
+        startToActivity(MainActivity.class);
+        finish();
     }
 
     @Override

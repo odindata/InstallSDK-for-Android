@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.odin.install.demo.BaseSchemeActivity;
+import com.odin.install.demo.BaseInstallActivity;
 import com.odin.install.demo.R;
 import com.odin.install.demo.adapter.RestoreSceneAdapter;
 import com.odin.install.demo.data.RestoreBean;
@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * 场景还原
  */
-public class ScenarioReductionActivity extends BaseSchemeActivity {
+public class ScenarioReductionActivity extends BaseInstallActivity {
 
     @Override
     public int getLayoutId() {
@@ -47,22 +47,20 @@ public class ScenarioReductionActivity extends BaseSchemeActivity {
         List<RestoreBean> restoreBeanList = new ArrayList<>();
 
         RestoreBean restoreBean1 = new RestoreBean();
-        restoreBean1.setTitle("我是新闻1");
-        restoreBean1.setCount(86);
-        restoreBean1.setUrl("file:///android_asset/news1.htm");
+        restoreBean1.setTitle(getString(R.string.str_news_title1));
+        restoreBean1.setCount("置顶 专题 1183人浏览");
+        restoreBean1.setUrl("file:///android_asset/news_detail.html");
+        restoreBean1.setIcon(R.mipmap.new_1);
+        restoreBean1.setContent(getString(R.string.str_news_content1));
         restoreBeanList.add(restoreBean1);
 
         RestoreBean restoreBean2 = new RestoreBean();
-        restoreBean2.setTitle("我是新闻2");
-        restoreBean2.setCount(112);
-        restoreBean2.setUrl("file:///android_asset/news2.htm");
+        restoreBean2.setTitle(getString(R.string.str_news_title2));
+        restoreBean2.setCount("1142人浏览");
+        restoreBean2.setUrl("file:///android_asset/news_detail2.html");
+        restoreBean2.setIcon(R.mipmap.new_2);
+        restoreBean2.setContent(getString(R.string.str_news_content2));
         restoreBeanList.add(restoreBean2);
-
-        RestoreBean restoreBean3 = new RestoreBean();
-        restoreBean3.setTitle("我是新闻3");
-        restoreBean3.setCount(56);
-        restoreBean3.setUrl("file:///android_asset/news3.htm");
-        restoreBeanList.add(restoreBean3);
 
         mRecyclerView.setAdapter(new RestoreSceneAdapter(restoreBeanList));
     }

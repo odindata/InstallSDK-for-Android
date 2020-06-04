@@ -29,7 +29,9 @@
             android:name="Odin-Secret"
             android:value="b250f2ba017048e88275154a62ed1bce" />
 
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

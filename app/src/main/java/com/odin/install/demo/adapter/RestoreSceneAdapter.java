@@ -3,6 +3,7 @@ package com.odin.install.demo.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -30,14 +31,15 @@ public class RestoreSceneAdapter extends RecyclerView.Adapter<RestoreSceneAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final RestoreSceneViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final RestoreSceneViewHolder holder, final int position) {
         final RestoreBean restoreBean = restoreBeanList.get(position);
         holder.mTvTitle.setText(restoreBean.getTitle());
-        holder.mTvCount.setText(String.format(holder.itemView.getContext().getString(R.string.str_restore_scene_count), restoreBean.getCount()));
+        holder.mTvCount.setText(restoreBean.getCount());
+        holder.mImgIcon.setImageResource(restoreBean.getIcon());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RestoreSceneActivity.newInstance(holder.itemView.getContext(), restoreBean.getUrl());
+                RestoreSceneActivity.newInstance(holder.itemView.getContext(), restoreBean.getTitle(), restoreBean.getContent(), restoreBean.getUrl());
             }
         });
     }
@@ -50,15 +52,17 @@ public class RestoreSceneAdapter extends RecyclerView.Adapter<RestoreSceneAdapte
         return restoreBeanList.size();
     }
 
-    class RestoreSceneViewHolder extends RecyclerView.ViewHolder {
+    static class RestoreSceneViewHolder extends RecyclerView.ViewHolder {
 
         TextView mTvTitle;
         TextView mTvCount;
+        ImageView mImgIcon;
 
         RestoreSceneViewHolder(@NonNull View itemView) {
             super(itemView);
             mTvTitle = itemView.findViewById(R.id.tv_item_title);
             mTvCount = itemView.findViewById(R.id.tv_item_count);
+            mImgIcon = itemView.findViewById(R.id.img_item);
         }
     }
 }

@@ -91,10 +91,14 @@ public class GlobalUtil {
 
     public static void oneKeyShare() {
         String url = "http://www.odinanalysis.com/.well-known/demo/install/index.html?odinkey=" + GlobalUtil.getOdinKey();
+        oneKeyShare(url);
+    }
+
+    public static void oneKeyShare(String shareUrl) {
         Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher);
         new OneKeyShare().setTitle(context.getString(R.string.app_name))
                 .setText(context.getString(R.string.app_explain))
-                .setUrl(url)
+                .setUrl(shareUrl)
                 .setImageData(bitmap)
                 .show(context);
     }

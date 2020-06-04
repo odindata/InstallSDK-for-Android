@@ -7,7 +7,7 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.odin.install.demo.BaseSchemeActivity;
+import com.odin.install.demo.BaseInstallActivity;
 import com.odin.install.demo.Constant;
 import com.odin.install.demo.utils.GlobalUtil;
 import com.odin.install.demo.R;
@@ -21,7 +21,7 @@ import com.odin.odininstall.listener.AppShareAdapter;
 /**
  * 用户溯源
  */
-public class UserTraceActivity extends BaseSchemeActivity implements UserNameDialog.OnEnsureClickListener {
+public class UserTraceActivity extends BaseInstallActivity implements UserNameDialog.OnEnsureClickListener {
 
     private static final String TAG = "UserTraceActivity";
     private TextView mTvUserId;

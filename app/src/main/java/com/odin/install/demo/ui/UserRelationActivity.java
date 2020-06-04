@@ -5,6 +5,7 @@ import android.text.TextUtils;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.odin.install.demo.BaseInstallActivity;
 import com.odin.install.demo.BaseSchemeActivity;
 import com.odin.install.demo.Constant;
 import com.odin.install.demo.utils.GlobalUtil;
@@ -24,7 +25,7 @@ import io.reactivex.schedulers.Schedulers;
 /**
  * 用户关系
  */
-public class UserRelationActivity extends BaseSchemeActivity {
+public class UserRelationActivity extends BaseInstallActivity {
 
     private UserRelationAdapter userRelationAdapter;
 
