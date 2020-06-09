@@ -8,11 +8,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.odin.install.demo.BaseInstallActivity;
-import com.odin.install.demo.Constant;
 import com.odin.install.demo.utils.GlobalUtil;
 import com.odin.install.demo.R;
 import com.odin.install.demo.ui.dialog.UserNameDialog;
-import com.odin.install.demo.utils.OdinSpUtil;
 import com.odin.install.demo.utils.QRCodeUtil;
 import com.odin.odininstall.OdinInstall;
 import com.odin.odininstall.data.ShareData;
@@ -92,7 +90,6 @@ public class UserTraceActivity extends BaseInstallActivity implements UserNameDi
                 }
                 Log.i(TAG, "获取分享链接成功，landingPageUrl == " + landingPageUrl);
                 initQRCode(landingPageUrl);
-                OdinSpUtil.setString(UserTraceActivity.this, Constant.SHARE_URL, landingPageUrl);
                 GlobalUtil.setShareUrl(landingPageUrl);
             }
         });

@@ -10,9 +10,6 @@ import android.text.TextUtils;
 
 import com.odin.install.demo.Constant;
 import com.odin.install.demo.R;
-import com.odin.odininstall.OdinInstall;
-import com.odin.odininstall.data.ShareData;
-import com.odin.odininstall.listener.AppShareAdapter;
 
 import cn.odinshare.odinonekeyshare.OneKeyShare;
 
@@ -35,7 +32,6 @@ public class GlobalUtil {
     private static void initSp() {
         userId = OdinSpUtil.getString(context, Constant.USER_ID);
         userIdParent = OdinSpUtil.getString(context, Constant.USER_ID_PARENT);
-        shareUrl = OdinSpUtil.getString(context, Constant.SHARE_URL);
         channelCode = OdinSpUtil.getString(context, Constant.CHANNEL_CODE);
     }
 
@@ -57,6 +53,10 @@ public class GlobalUtil {
         return odinKey;
     }
 
+    public static void setUserId(String userId) {
+        GlobalUtil.userId = userId;
+    }
+
     public static String getUserId() {
         if (TextUtils.isEmpty(userId)) {
             initSp();
@@ -64,10 +64,11 @@ public class GlobalUtil {
         return userId;
     }
 
+    public static void setUserIdParent(String userIdParent) {
+        GlobalUtil.userIdParent = userIdParent;
+    }
+
     public static String getUserIdParent() {
-        if (TextUtils.isEmpty(userIdParent)) {
-            initSp();
-        }
         return userIdParent;
     }
 

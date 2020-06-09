@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 
 import com.odin.install.demo.Constant;
 import com.odin.install.demo.R;
+import com.odin.install.demo.utils.GlobalUtil;
 import com.odin.install.demo.utils.OdinSpUtil;
 import com.odin.odininstall.OdinInstall;
 import com.odin.odininstall.listener.AppRegisterListener;
@@ -62,9 +63,12 @@ public class UserNameDialog extends Dialog {
                     Log.i(TAG, "注册完成，上级用户Id: " + parentUserID + "，error: " + error);
                     if (error == null) {
                         if (!TextUtils.isEmpty(parentUserID)) {
+                            GlobalUtil.setUserIdParent(parentUserID);
                             OdinSpUtil.setString(getContext(), Constant.USER_ID_PARENT, parentUserID);
                         }
+                        GlobalUtil.setUserId(userId);
                         OdinSpUtil.setString(getContext(), Constant.USER_ID, userId);
+                        Toast.makeText(getContext(), "注册成功", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(getContext(), "注册失败：" + error.getErrorMsg(), Toast.LENGTH_SHORT).show();
                     }

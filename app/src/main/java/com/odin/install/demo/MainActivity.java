@@ -106,8 +106,7 @@ public class MainActivity extends BaseActivity {
      */
     private void initOdinInstallShareUrl() {
         String userId = GlobalUtil.getUserId();
-        String shareUrl = GlobalUtil.getShareUrl();
-        if (TextUtils.isEmpty(userId) || !TextUtils.isEmpty(shareUrl)) {
+        if (TextUtils.isEmpty(userId)) {
             return;
         }
         OdinInstall.getShareUrl(userId, "test", new AppShareAdapter() {
@@ -123,7 +122,6 @@ public class MainActivity extends BaseActivity {
                     return;
                 }
                 Log.i(TAG, "获取分享链接成功，landingPageUrl == " + landingPageUrl);
-                OdinSpUtil.setString(MainActivity.this, Constant.SHARE_URL, landingPageUrl);
                 GlobalUtil.setShareUrl(landingPageUrl);
             }
         });

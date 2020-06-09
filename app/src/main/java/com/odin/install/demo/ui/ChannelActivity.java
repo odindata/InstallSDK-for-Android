@@ -137,7 +137,6 @@ public class ChannelActivity extends BaseInstallActivity {
                 }
                 Log.i(TAG, "获取分享链接成功，landingPageUrl == " + landingPageUrl);
                 initQRCode(landingPageUrl);
-                OdinSpUtil.setString(ChannelActivity.this, Constant.SHARE_URL, landingPageUrl);
                 GlobalUtil.setShareUrl(landingPageUrl);
             }
         });

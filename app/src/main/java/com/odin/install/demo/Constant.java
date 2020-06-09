@@ -9,7 +9,9 @@ public class Constant {
 
     public static final String USER_ID = "user_id";
     public static final String USER_ID_PARENT = "user_id_parent";
-    public static final String SHARE_URL = "share_url";
     public static final String CHANNEL_CODE = "channel_code";
+
+    public static final String SCENARIO_REDUCTION_PAGE_ONE = "page_1";
+    public static final String SCENARIO_REDUCTION_PAGE_SECOND = "page_2";
 
 }
